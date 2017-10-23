@@ -70,6 +70,7 @@ Route::group(['prefix' => 'student'],function(){
 });
 */
 
+/*
 //練習七: 路由命名
 Route::pattern('student_no','s[0-9]{10}');
 
@@ -85,3 +86,7 @@ Route::group(['prefix' => 'student'],function(){
             return '學號：' . $student_no . '的' . ((is_null($subject)) ? '所有科目' : $subject) . '成績';
         }])->where(['subject' => '(chinese | english | math)']);
 });
+*/
+
+//練習八: 修改根路由'/'，使之可執行HomeController的indexc函數
+Route::get('/', 'HomeController@indexc');
