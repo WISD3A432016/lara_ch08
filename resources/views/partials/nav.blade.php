@@ -1,9 +1,9 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="/">HelloLaravel</a>
+        <a class="navbar-brand" href="{{ url('/')}}">HelloLaravel</a>
         <ul class="nav navbar-nav">
             <li>
-                <a href="#">排行榜</a>
+                <a href="{{ url('/board')}}">排行榜</a>
             </li>
         </ul>
     </div>
