@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+/*
 //練習一: 顯示學生的資料與成績
 Route::get('student/{student_no}',function ($student_no){
     return '學號：'.$student_no;
@@ -22,7 +22,7 @@ Route::get('student/{student_no}',function ($student_no){
 Route::get('student/{student_no}/score',function ($student_no){
     return '學號：'.$student_no.'的所有成績';
 });
-
+*/
 /*
 //練習二: 提供學生查詢自己的成績
 Route::get('student/{student_no}/score/{subject}', function ($student_no,$subject){
@@ -109,7 +109,7 @@ Route::group(['namespace' => 'Cool'],function (){
     Route::get('cool', 'TestController@indexc');
 });
 */
-
+/*
 //ch07練習二 : 增加路由'/board'，使之可執行BoardController的getIndex方法
 Route::get('/board', 'BoardController@getIndex');
 
@@ -124,4 +124,13 @@ Route::group(['prefix' => 'student'],function() {
         'uses' => 'StudentController@getStudentScore'])->where(['subject' => '(chinese|english|math)']);
 
 
+});
+*/
+
+Route::get('/adduser',function (){
+   $user = new \App\User();
+   $user -> name = "user1";
+   $user -> email = "user1@test.com";
+   $user -> password = "user1pass";
+   $user -> save();
 });
