@@ -142,3 +142,13 @@ Route::get('/addstudent',function (){
     $student -> tel = "0912345678";
     $student -> save();
 });
+
+Route::get('/addscore',function (){
+    $score = new \App\Score();
+    $score -> student_id = "1";
+    $score -> chinese = "60";
+    $score -> english = "60";
+    $score -> math = "60";
+    $score -> total = "180";
+    $score -> save();
+});
