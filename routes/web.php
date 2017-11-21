@@ -129,27 +129,27 @@ Route::group(['prefix' => 'student'],function() {
 
 Route::get('/adduser',function (){
    $user = new \App\User();
-   $user -> name = "user2";
-   $user -> email = "user2@test.com";
+   $user -> name = "user3";
+   $user -> email = "user3@test.com";
    $user -> password = "user1pass";
    $user -> save();
 });
 
 Route::get('/addstudent',function (){
     $student = new \App\Student();
-    $student -> user_id = "2";
-    $student -> no = "s3a432000";
-    $student -> tel = "0987654321";
+    $student -> user_id = "3";
+    $student -> no = "s9876543210";
+    $student -> tel = "0135796431";
     $student -> save();
 });
 
 Route::get('/addscore',function (){
     $score = new \App\Score();
-    $score -> student_id = "2";
-    $score -> chinese = "70";
-    $score -> english = "70";
-    $score -> math = "70";
-    $score -> total = "210";
+    $score -> student_id = "3";
+    $score -> chinese = "80";
+    $score -> english = "80";
+    $score -> math = "80";
+    $score -> total = "240";
     $score -> save();
 });
 
