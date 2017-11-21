@@ -9,6 +9,12 @@ class Student extends Model
 {
     protected $table = 'student';
 
+    protected $fillable=[
+        'user_id',
+        'no',
+        'tel'
+    ];
+
     //學生對應到一個成績 (a Student hasOne Score)
     public function score(){
         return $this->hasOne(ScoreEloquent::class);

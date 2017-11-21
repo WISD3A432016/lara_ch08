@@ -134,3 +134,11 @@ Route::get('/adduser',function (){
    $user -> password = "user1pass";
    $user -> save();
 });
+
+Route::get('/addstudent',function (){
+    $student = new \App\Student();
+    $student -> user_id = "1";
+    $student -> no = "user1@test.com";
+    $student -> tel = "0912345678";
+    $student -> save();
+});
