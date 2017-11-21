@@ -22,18 +22,20 @@
 				</tr>
 				</thead>
 				<tbody>
+				@foreach($scores as $index => $score)
 				<tr>
-					<td>1</td>
-					<td>s1234567890</td>
-					<td>小明</td>
-					<td>60</td>
-					<td>60</td>
-					<td>60</td>
-					<td>180</td>
+					<td>{{$index}}</td>
+					<td>{{$score->student->no}}</td>
+					<td>{{$score->student->user->name}}</td>
+					<td>{{$score->chinese}}</td>
+					<td>{{$score->english}}</td>
+					<td>{{$score->math}}</td>
+					<td>{{$score->total}}</td>
 					<td>
 						<a class="btn btn-default btn-sm" href="{{route('student',['student_no'=>'s1234567890'])}}">查看學生資料</a>
 					</td>
 				</tr>
+				@endforeach
 				</tbody>
 			</table>
 		</div>
