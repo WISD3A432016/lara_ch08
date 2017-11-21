@@ -152,3 +152,11 @@ Route::get('/addscore',function (){
     $score -> total = "180";
     $score -> save();
 });
+
+Route::get('updatestudent',function(){
+    $student= \App\Student::find(1);
+    $student->update([
+        'no'=>'s1234567890'
+    ]);
+});
+
