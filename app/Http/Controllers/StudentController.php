@@ -19,7 +19,7 @@ class StudentController extends Controller
         // return "學號: ".$student_no;
 */
         //ch07(練習三)-3修改StudentController的 getStudentData 方法，使之可傳入student_no或subject的資料
-        return View::make('score', [
+        return View::make('student', [
             'student_no' => $student_no,
             'subject' => null
         ]);
@@ -29,6 +29,7 @@ class StudentController extends Controller
            'student'=>$student,
             'user'=>$student->user,
             'score'=>$student->score,
+
             'subject'=>null
         ]);
     }
